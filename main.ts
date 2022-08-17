@@ -308,6 +308,17 @@ namespace EzyMatrix {
                 }
             }
         }
+		
+        //% blockId="showCustomNew" block="%strip| display New Custom Icon string %str| Block %BlkNo| color %color"
+        //% BlkNo.min=0 BlkNo.max= 5 advanced=true weight=72
+        showCustomNew(str: string, BlkNo: number, color: number): void {
+            screen = [0];
+            this.update(BlkNo);
+            screen = [m2l(hex2dec(str.substr(14, 2))), m2l(hex2dec(str.substr(12, 2))), m2l(hex2dec(str.substr(10, 2))), m2l(hex2dec(str.substr(8, 2))), m2l(hex2dec(str.substr(6, 2))), m2l(hex2dec(str.substr(4, 2))), m2l(hex2dec(str.substr(2, 2))), m2l(hex2dec(str.substr(0, 2)))];
+            //    serial.writeNumbers(screen);
+            this.display(color, BlkNo);
+
+        }		
 
   /**
         // blockId="showCustomNew" block="%strip| display New Custom Icon string %str| Block %BlkNo| color %color"
@@ -319,18 +330,6 @@ namespace EzyMatrix {
             this.display(color, BlkNo);
             serial.writeString(str);
         }
-
-        //% blockId="showCustomNew" block="%strip| display New Custom Icon string %str| Block %BlkNo| color %color"
-        //% BlkNo.min=0 BlkNo.max= 5 advanced=true weight=72
-        showCustomNew(str: string, BlkNo: number, color: number): void {
-            screen = [0];
-            this.update(BlkNo);
-            screen = [m2l(hex2dec(str.substr(14, 2))), m2l(hex2dec(str.substr(12, 2))), m2l(hex2dec(str.substr(10, 2))), m2l(hex2dec(str.substr(8, 2))), m2l(hex2dec(str.substr(6, 2))), m2l(hex2dec(str.substr(4, 2))), m2l(hex2dec(str.substr(2, 2))), m2l(hex2dec(str.substr(0, 2)))];
-            //    serial.writeNumbers(screen);
-            this.display(color, BlkNo);
-
-        }
-
 
         //% blockId="showCustomUpdate" block="%strip| display Update Custom Icon string %str| Block %BlkNo| color %color"
         //% BlkNo.min=0 BlkNo.max= 5 advanced=true weight=70
