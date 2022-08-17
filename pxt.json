@@ -1,0 +1,19 @@
+{
+    "name": "EzyMatrix",
+    "version": "1.0",
+    "description": "EzyMatrix @THYCoding </>",	
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "ws2812b": "github:Microsoft/pxt-ws2812b#v0.0.4"
+    },
+    "files": [
+        "README.md",
+        "main.ts",
+        "_locales/zh/matrix-strings.json"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": false
+}
