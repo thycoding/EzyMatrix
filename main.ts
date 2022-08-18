@@ -320,26 +320,6 @@ namespace EzyMatrix {
 
         }		
 
-  /**
-        // blockId="showCustomNew" block="%strip| display New Custom Icon string %str| Block %BlkNo| color %color"
-        // BlkNo.min=0 BlkNo.max= 5 advanced=true weight=75
-        showCustomNew0(str: string, BlkNo: number, color: number): void {
-            screen = [0];
-            this.update(BlkNo);
-            screen = [hex2dec(str.substr(0, 2)), hex2dec(str.substr(2, 2)), hex2dec(str.substr(4, 2)), hex2dec(str.substr(6, 2)), hex2dec(str.substr(8, 2)), hex2dec(str.substr(10, 2)), hex2dec(str.substr(12, 2)), hex2dec(str.substr(14, 2))];
-            this.display(color, BlkNo);
-            serial.writeString(str);
-        }
-
-        //% blockId="showCustomUpdate" block="%strip| display Update Custom Icon string %str| Block %BlkNo| color %color"
-        //% BlkNo.min=0 BlkNo.max= 5 advanced=true weight=70
-        showCustomUpdate(str: string, BlkNo: number, color: number): void {
-            screen = [m2l(hex2dec(str.substr(14, 2))), m2l(hex2dec(str.substr(12, 2))), m2l(hex2dec(str.substr(10, 2))), m2l(hex2dec(str.substr(8, 2))), m2l(hex2dec(str.substr(6, 2))), m2l(hex2dec(str.substr(4, 2))), m2l(hex2dec(str.substr(2, 2))), m2l(hex2dec(str.substr(0, 2)))];
-            this.display(color, BlkNo);
-            //    serial.writeString(str);
-        }
-
- */
 
         setChar(color: number): void {
             let i = 0;
@@ -430,15 +410,6 @@ namespace EzyMatrix {
             }
         }
 
-        //% blockId="neopixel_set_strip_color" block="%strip|fill color %rgb"
-        //% weight=85 blockGap=8
-        //% parts="neopixel"
-        //% BlkNo.min=0 BlkNo.max= 5 
-        showColor(rgb: number) {
-            this.update(0);
-            this.setAllRGB(rgb);
-            this.show();
-        }
 
         //% blockId="neopixel_set_strip_color_blk" block="%strip|fill color %rgb| Block %BlkNo"
         //% weight=85 blockGap=8
@@ -460,14 +431,6 @@ namespace EzyMatrix {
             ws2812b.sendBuffer(this.buf, this.pin);
         }
 
-        //% blockId="clear" block="%strip|clear"
-        //% weight=76
-        //% parts="neopixel"
-        //% BlkNo.min=0 BlkNo.max= 5 
-        clear(): void {
-            this.update(0);
-            this.show();
-        }
         //% blockId="clearBlk" block="%strip|clear | Block %BlkNo"
         //% weight=76
         //% parts="neopixel"
@@ -821,11 +784,6 @@ namespace EzyMatrix {
         return strip;
     }
 
-    //% weight=90
-    //% blockId="neopixel_Screate" block="create Matrix Pin %SerialPinTx"
-    export function SCreate(SerialPinTx: DigitalPin): Strip {
-        return create(SerialPinTx, 1);
-    }
 
     //% weight=1
     //% blockId="neopixel_rgb" block="red %red|green %green|blue %blue"
