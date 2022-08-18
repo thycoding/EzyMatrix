@@ -412,7 +412,7 @@ namespace EzyMatrix {
 
 
         //% blockId="neopixel_set_strip_color_blk" block="%strip|fill color %rgb| Block %BlkNo"
-        //% weight=85 blockGap=8
+        //% weight=55 blockGap=8
         //% parts="neopixel"
         //% BlkNo.min=0 BlkNo.max= 5 advanced=true weight=89
         showColorBlk(rgb: number, BlkNo: number) {
@@ -432,7 +432,7 @@ namespace EzyMatrix {
         }
 
         //% blockId="clearBlk" block="%strip|clear | Block %BlkNo"
-        //% weight=76
+        //% weight=57
         //% parts="neopixel"
         //% BlkNo.min=0 BlkNo.max= 5 advanced=true weight=87
         clearBlk(BlkNo: number): void {
@@ -766,7 +766,7 @@ namespace EzyMatrix {
      * @param NoBlk is number of block in the matrix, eg:1
     */
     //% blockId="neopixel_Mcreate" block="create Matrix Pin %SerialPinTx| Number of Block %NoBlk"
-    //% weight=90 blockGap=8 
+    //% weight=50 blockGap=8 
     //% NoBlk.min=1 NoBlk.max= 6 advanced=true
     export function create(SerialPinTx: DigitalPin, NoBlk: number): Strip {
         let strip = new Strip();
