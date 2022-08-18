@@ -410,7 +410,7 @@ namespace EzyMatrix {
             }
         }
 
-		//% weight=190 group="01_Basic" 	
+		//% weight=190 group="Basic" 	
         //% blockId="neopixel_set_strip_color_blk" block="%strip|fill color %rgb| Block %BlkNo"
         //% blockGap=8
         //% parts="neopixel"
@@ -453,7 +453,7 @@ namespace EzyMatrix {
             }
         }
 
-		//% weight=170 group="01_Basic" 
+		//% weight=170 group="Basic" 
         //% parts="neopixel" 
         //% blockId="setBrightness" block="%strip|set brightness %brightness" blockGap=8
         //% brightness.min=0 brightness.max=255
@@ -765,7 +765,7 @@ namespace EzyMatrix {
      * Functions to create NeoPixel strips.
      * @param NoBlk is number of block in the matrix, eg:1
     */
-    //% weight=200 group="01_Basic" 	
+    //% weight=200 group="Basic" 	
     //% blockId="neopixel_Mcreate" block="create Matrix Pin %SerialPinTx| Number of Block %NoBlk"
     //% blockGap=8 
     //% NoBlk.min=1 NoBlk.max= 6
@@ -786,13 +786,13 @@ namespace EzyMatrix {
     }
 
 
-    //% weight=1
+    //% weight=160
     //% blockId="neopixel_rgb" block="red %red|green %green|blue %blue"
     export function rgb(red: number, green: number, blue: number): number {
         return packRGB(red, green, blue);
     }
 
-    //% weight=2 blockGap=8
+    //% weight=150 blockGap=8
     //% blockId="neopixel_colors" block="%color"
     export function colors(color: NeoPixelColors): number {
         return color;
