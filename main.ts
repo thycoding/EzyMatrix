@@ -410,7 +410,6 @@ namespace EzyMatrix {
             }
         }
 
-		//% weight=190 group="01_Basic" 	
         //% blockId="neopixel_set_strip_color_blk" block="%strip|fill color %rgb| Block %BlkNo"
         //% blockGap=8
         //% parts="neopixel"
@@ -431,7 +430,6 @@ namespace EzyMatrix {
             ws2812b.sendBuffer(this.buf, this.pin);
         }
 
-		//% weight=180 group="01_Basic" 	
         //% blockId="clearBlk" block="%strip|clear | Block %BlkNo"
         //% parts="neopixel"
         //% BlkNo.min=0 BlkNo.max= 5 advanced=true weight=87
@@ -765,7 +763,6 @@ namespace EzyMatrix {
      * Functions to create NeoPixel strips.
      * @param NoBlk is number of block in the matrix, eg:1
     */
-    //% weight=200 group="01_Basic" 	
     //% blockId="neopixel_Mcreate" block="create Matrix Pin %SerialPinTx| Number of Block %NoBlk"
     //% blockGap=8 
     //% NoBlk.min=1 NoBlk.max= 6 advanced=true
