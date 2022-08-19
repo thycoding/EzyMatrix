@@ -357,13 +357,15 @@ namespace EzyMatrix {
             this.setPixel(x, y, BlkNo, NeoPixelColors.Black);
         }
 
+		//% weight=170 group="Basic" 	
         //% blockId="showNumber" block="%strip| show number %num| color %color"
         //% parts="neopixel"
         showNumber(num: number, color: number): void {
             this.updateAll();
             this.showString(num.toString(), color);
         }
-
+		
+		//% weight=175 group="Basic" 	
         //% blockId="showString" block="%strip| display string %str| color %color"
         showString(str: string, color: number): void {
             let l = str.length;
@@ -431,7 +433,7 @@ namespace EzyMatrix {
             ws2812b.sendBuffer(this.buf, this.pin);
         }
 
-		//% weight=180 group="01_Basic" 	
+		//% weight=180 group="Basic" 	
         //% blockId="clearBlk" block="%strip|clear | Block %BlkNo"
         //% parts="neopixel"
         //% BlkNo.min=0 BlkNo.max= 5 weight=87
@@ -786,13 +788,13 @@ namespace EzyMatrix {
     }
 
 
-    //% weight=160
+	//% weight=160 group="Basic" 		
     //% blockId="neopixel_rgb" block="red %red|green %green|blue %blue"
     export function rgb(red: number, green: number, blue: number): number {
         return packRGB(red, green, blue);
     }
 
-    //% weight=150 blockGap=8
+	//% weight=150 group="Basic" 	
     //% blockId="neopixel_colors" block="%color"
     export function colors(color: NeoPixelColors): number {
         return color;
