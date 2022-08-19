@@ -394,8 +394,9 @@ namespace EzyMatrix {
             this.setChar(color);
         }
 
+		//% weight=150 group="Main" 	
         //% blockId="showCompass" block="%strip| display dir %dir| Block %BlkNo | color %color"
-        //% BlkNo.min=0 BlkNo.max= 5 advanced=true
+        //% BlkNo.min=0 BlkNo.max= 5
         showCompass(dir: _Dir, BlkNo: number, color: number): void {
             let i = 0;
             let j = 0;
@@ -415,7 +416,7 @@ namespace EzyMatrix {
         //% blockId="neopixel_set_strip_color_blk" block="%strip|fill color %rgb| Block %BlkNo"
         //% blockGap=8
         //% parts="neopixel"
-        //% BlkNo.min=0 BlkNo.max= 5 weight=89
+        //% BlkNo.min=0 BlkNo.max= 5
         showColorBlk(rgb: number, BlkNo: number) {
             //    this.update(BlkNo);
             //    this.setAllRGB(rgb);
@@ -435,7 +436,7 @@ namespace EzyMatrix {
 		//% weight=190 group="Main" 	
         //% blockId="clearBlk" block="%strip|clear | Block %BlkNo"
         //% parts="neopixel"
-        //% BlkNo.min=0 BlkNo.max= 5 weight=87
+        //% BlkNo.min=0 BlkNo.max= 5
         clearBlk(BlkNo: number): void {
             this.update(BlkNo);
             this.show();
@@ -792,7 +793,7 @@ namespace EzyMatrix {
         return packRGB(red, green, blue);
     }
 
-	//% weight=150 group="Main" 	
+	//% weight=155 group="Main" 	
     //% blockId="neopixel_colors" block="%color"
     export function colors(color: NeoPixelColors): number {
         return color;
