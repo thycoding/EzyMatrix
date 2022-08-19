@@ -320,7 +320,6 @@ namespace EzyMatrix {
 
         }		
 
-
         setChar(color: number): void {
             let i = 0;
             let j = 0;
@@ -357,7 +356,7 @@ namespace EzyMatrix {
             this.setPixel(x, y, BlkNo, NeoPixelColors.Black);
         }
 
-		//% weight=170 group="Basic" 	
+		//% weight=170 group="Main" 	
         //% blockId="showNumber" block="%strip| show number %num| color %color"
         //% parts="neopixel"
         showNumber(num: number, color: number): void {
@@ -365,7 +364,7 @@ namespace EzyMatrix {
             this.showString(num.toString(), color);
         }
 		
-		//% weight=175 group="Basic" 	
+		//% weight=175 group="Main" 	
         //% blockId="showString" block="%strip| display string %str| color %color"
         showString(str: string, color: number): void {
             let l = str.length;
@@ -412,7 +411,7 @@ namespace EzyMatrix {
             }
         }
 
-		//% weight=190 group="Basic" 	
+		//% weight=195 group="Main" 	
         //% blockId="neopixel_set_strip_color_blk" block="%strip|fill color %rgb| Block %BlkNo"
         //% blockGap=8
         //% parts="neopixel"
@@ -433,7 +432,7 @@ namespace EzyMatrix {
             ws2812b.sendBuffer(this.buf, this.pin);
         }
 
-		//% weight=180 group="Basic" 	
+		//% weight=190 group="Main" 	
         //% blockId="clearBlk" block="%strip|clear | Block %BlkNo"
         //% parts="neopixel"
         //% BlkNo.min=0 BlkNo.max= 5 weight=87
@@ -455,7 +454,7 @@ namespace EzyMatrix {
             }
         }
 
-		//% weight=170 group="Basic" 
+		//% weight=185 group="Main" 
         //% parts="neopixel" 
         //% blockId="setBrightness" block="%strip|set brightness %brightness" blockGap=8
         //% brightness.min=0 brightness.max=255
@@ -759,15 +758,14 @@ namespace EzyMatrix {
                     break;
             }
         }
-
-
-
     }
+
+
     /**
      * Functions to create NeoPixel strips.
      * @param NoBlk is number of block in the matrix, eg:1
     */
-    //% weight=200 group="Basic" 	
+    //% weight=200 group="Main" 	
     //% blockId="neopixel_Mcreate" block="create Matrix Pin %SerialPinTx| Number of Block %NoBlk"
     //% blockGap=8 
     //% NoBlk.min=1 NoBlk.max= 6
@@ -788,13 +786,13 @@ namespace EzyMatrix {
     }
 
 
-	//% weight=160 group="Basic" 		
+	//% weight=160 group="Main" 		
     //% blockId="neopixel_rgb" block="red %red|green %green|blue %blue"
     export function rgb(red: number, green: number, blue: number): number {
         return packRGB(red, green, blue);
     }
 
-	//% weight=150 group="Basic" 	
+	//% weight=150 group="Main" 	
     //% blockId="neopixel_colors" block="%color"
     export function colors(color: NeoPixelColors): number {
         return color;
@@ -842,6 +840,7 @@ namespace EzyMatrix {
         let digits = "084C2A6E195D3B7F";
         return s.compare(digits)
     }
+	
     export function m2l(n: number): number {
         let i = 0;
         let j = 7;
